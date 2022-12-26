@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JS</title>
+  </head>
+  <body>
+    <h1>Array - Latihan 8</h1>
+
+    <script>
+      // Manipulasi Array
+      // 1. Menambah isi Array
+      // var arr = [];
+      // arr[0] = "Aditya";
+      // arr[1] = "Gerald";
+      // arr[2] = "Ibrahim";
+
+      // console.log(arr);
+
+      // 2. Menghapus isi Array
+      // var arr = ["Aditya", "Gerald", "Ibrahim"];
+      // arr[1] = undefined;
+      // console.log(arr);
+
+      // 3. Menampilkan isi Array
+      // var arr = ["Aditya", "Gerald", "Ibrahim"];
+      // for (let i = 0; i < arr.length; i++) {
+      //   console.log("Mahasiswa ke-" + (i + 1) + " : " + arr[i]);
+      // }
+
+      // Method pd Array
+      // 1. Join
+      // var arr = ["Aditya", "Gerald", "Ibrahim"];
+      // console.log(arr.join(" - "));
+
+      // 2. Push & Pop
+      // var arr = ["Aditya", "Gerald", "Ibrahim"];
+      // arr.push("Farid", "Dhany");
+      // arr.pop();
+      // arr.pop();
+      // console.log(arr.join(" - "));
+
+      // 3. Unshift & Shift
+      // var arr = ["Aditya", "Gerald", "Ibrahim"];
+      // arr.unshift("Dhany");
+      // arr.shift();
+      // console.log(arr.join(" - "));
+
+      // 4. Splice
+      /*
+        splice(indexAwal, mauDiHapusBerapa?, elemenBaru1, elemenBaru2, ...);
+      */
+      // var arr = ["Aditya", "Gerald", "Ibrahim"];
+      // arr.splice(1, 0, "Farid");
+      // arr.splice(0, 0, "Dhany");
+      // console.log(arr.join(" - "));
+
+      // 5. Slice
+      /*
+        slice(indexAwal, indexAkhir);
+
+        slice menghasilkan Array baru, jadi harus di tampung pada variabel baru
+      */
+      // var arr = ["Aditya", "Dhany", "Farid", "Gerald", "Ibrahim"];
+      // var arr2 = arr.slice(2, 4);
+      // console.log(arr2.join(" - "));
+
+      // 6. Foreach
+      // var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+      // var nama = ["Aditya", "Dhany", "Farid", "Gerald", "Ibrahim"];
+
+      // angka.forEach(function (e) {
+      //   console.log(e);
+      // });
+
+      // nama.forEach(function (elemens, indeks) {
+      //   console.log("Mahasiswa ke-" + (indeks + 1) + " adalah " + elemens);
+      // });
+
+      // 7. Map
+      // Method MAP mengembalikan nilai Array
+      // var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      // var angka2 = angka.map(function (e) {
+      //   return e * 2;
+      // });
+
+      // console.log("Baris Angka Array Awal : \n" + angka.join(" - "));
+      // console.log("Baris Angka Array setelah di x2 : \n" + angka2.join(" - "));
+
+      // 8. Sort
+      // var angka = [9, 7, 4, 2, 10, 1, 6, 20, 3, 5, 8];
+      // console.log("Sebelum di SORT : \n" + angka.join(", "));
+      // angka.sort(function (a, b) {
+      //   return a - b;
+      // });
+      // console.log("Setelah di SORT : \n" + angka.join(", "));
+
+      // 9. Filter & Find
+      var angka = [9, 7, 4, 2, 10, 1, 6, 20, 3, 5, 8];
+      // var angka2 = angka.filter(function (x) {
+      //   return x > 5;
+      // });
+      // console.log(angka2.join(" - "));
+      var angka2 = angka.find(function (x) {
+        return x > 5;
+      });
+      console.log(angka2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JS</title>
+  </head>
+  <body>
+    <h1>This (Object) - Latihan 9</h1>
+
+    <script>
+      // This
+      // var a = 10;
+      // console.log(this.a);
+
+      // Membuat Object
+
+      // 1. Object Literal
+      // var obj = { a: 10, nama: "Gerald Alessandro Timothy" };
+
+      // obj.halo = function () {
+      //   console.log(this);
+      //   console.log("Hallo! Obj Literal");
+      // };
+      // obj.halo();
+      // Mengembalikan Object yang bersangkutan
+
+      // 2. Function Declaration
+      // function halo() {
+      //   console.log(this);
+      //   console.log("Hallo! Funct. Declaration");
+      // }
+      // halo();
+      // /*atau */ this.halo();
+      // // This mengembalikan object Global
+
+      // 3. Constructor
+      function Halo() {
+        console.log(this);
+        console.log("Hallo! Constructor");
+      }
+      new Halo();
+      // This mengembalikan object yang baru dibuat
+    </script>
+  </body>
+</html>

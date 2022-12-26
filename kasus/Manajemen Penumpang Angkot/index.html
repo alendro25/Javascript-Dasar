@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studi Kasus JS</title>
+  </head>
+  <body>
+    <h1>Studi Kasus Manajemen Pengelolaan Angkot</h1>
+
+    <script>
+      // Membuat Object Angkot
+      function Angkot(sopir, trayek, penumpang, kas) {
+        this.sopir = sopir;
+        this.trayek = trayek;
+        this.penumpang = penumpang;
+        this.kas = kas;
+
+        this.penumpangNaik = function (namaPenumpang) {
+          this.penumpang.push(namaPenumpang);
+          return this.penumpang;
+        };
+
+        this.penumpangTurun = function (namaPenumpang, bayar) {
+          if (this.penumpang.length === 0) {
+            return alert("Angkot Masih Kosong!");
+          }
+
+          for (let index = 0; index < penumpang.length; index++) {
+            if (this.penumpang[index] === namaPenumpang) {
+              this.penumpang[index] = undefined;
+              this.kas += bayar;
+              return this.penumpang;
+            }
+          }
+        };
+      }
+
+      var angkot1 = new Angkot(
+        "Gerald Alessandro T",
+        ["Surabaya", "Mojokerto"],
+        [],
+        0
+      );
+
+      var angkot2 = new Angkot(
+        "Aditya Hernanda",
+        ["Malang", "Sidoarjo"],
+        [],
+        0
+      );
+    </script>
+  </body>
+</html>

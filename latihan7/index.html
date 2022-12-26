@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JS</title>
+  </head>
+  <body>
+    <h1>Rekursif - Latihan 7</h1>
+
+    <script>
+      // Contoh rekursif
+      function faktorial(n) {
+        // Break Case - Agar berhenti me-rekursifs
+        if (n === 0) {
+          return 1;
+        }
+        return n * faktorial(n - 1);
+      }
+
+      // Faktorial(5)
+      console.log(faktorial(5));
+
+      // Pembahasan
+      /*
+        faktorial(5)
+          Cek apakah 5 === 0 ? (False), maka keluar dari block if.
+          5 * faktorial(5-1)                                 -> 5 * faktorial(4)
+
+          Cek apakah 4 === 0 ? (False), maka keluar dari block if.
+          5 * ( 4 * faktorial(4-1) )                          -> 5 * (4 * faktorial(3))
+
+          Cek apakah 3 === 0 ? (False), maka keluar dari block if.
+          5 * ( 4 * (3 * faktorial(3-1) )                     -> 5 * (4 * (3 * faktorial(2))
+          
+          Cek apakah 2 === 0 ? (False), maka keluar dari block if.
+          5 * ( 4 * (3 * (2 * faktorial(2-1) ) )              -> 5 * (4 * (3 * (2 * (faktorial(1)))))
+
+          Cek apakah 1 === 0 ? (False), maka keluar dari block if.
+          5 * ( 4 * (3 * (2 * (1 * faktorial(1-1) ) ) ) )      -> 5 * (4 * (3 * (2 * (1 * faktorial(0)))))
+
+          Cek apakah 0 ==== 0 ? (True), maka kembalikan nilai/ isi nilai dgn 1.
+
+          hasil :
+          5 * (4 * (3 * (2 * 1) ))
+          5 * (4 * (3 * 2 ))
+          5 * (4 * 6)
+          5 * 24
+          120
+      */
+    </script>
+  </body>
+</html>
